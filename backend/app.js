@@ -4,10 +4,10 @@ let cors = require("cors");
 require("dotenv").config()
 var mysql=require('mysql')
 var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : procces.env.USER,     // your root username
-    database : procces.env.DATABASE,   // the name of your db
-    password : procces.env.PASSWORD  
+    host     : process.env.DB_HOST,
+    user     : process.env.USER,     // your root username
+    database : process.env.DATABASE,   // the name of your db
+    password : process.env.PASSWORD  
   });
 app.use(express.json())
 
